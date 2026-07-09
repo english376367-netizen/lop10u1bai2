@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài Tập Trọng Âm - Tiếng Anh</title>
+    <style>
+        :root {
+            --primary-color: #9b59b6;
+            --success-color: #2ecc71;
+            --error-color: #e74c3c;
+            --text-color: #2c3e50;
+            --bg-color: #f8f9fa;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+
+        .instruction {
+            background-color: #f5eef8;
+            border-left: 5px solid var(--primary-color);
+            padding: 12px;
+            margin-bottom: 25px;
+            font-weight: 500;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .question-block {
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 15px 20px;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .question-title {
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .options-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+
+        @media (max-width: 600px) {
+            .options-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .option-label {
+            display: flex;
+            align-items: center;
+            padding: 10px 15px;
+            border: 1px solid #dcdde1;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .option-label:hover {
+            background-color: #f5f6fa;
+        }
+
+        .option-label input {
+            margin-right: 10px;
+            transform: scale(1.1);
+        }
+
+        .result-box {
+            display: none;
+            background: #f1f2f6;
+            padding: 15px;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1.1em;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .explanation {
+            display: none;
+            margin-top: 15px;
+            padding: 12px;
+            background-color: #fbf9fc;
+            border-left: 4px solid var(--primary-color);
+            border-radius: 4px;
+            font-size: 0.95em;
+        }
+
+        .correct {
+            background-color: #d4edda !important;
+            border-color: var(--success-color) !important;
+            color: #155724;
+        }
+
+        .incorrect {
+            background-color: #f8d7da !important;
+            border-color: var(--error-color) !important;
+            color: #721c24;
+        }
+
+        .btn-submit {
+            display: block;
+            width: 100%;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 14px;
+            font-size: 1.1em;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(155, 89, 182, 0.2);
+            transition: background 0.2s;
+        }
+
+        .btn-submit:hover {
+            background-color: #8e44ad;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>B. THỰC HÀNH</h2>
+    <div class="instruction">
+        Task 2. Find the word that differs from the other three in the position of stress in each of the following questions.
+    </div>
+
+    <form id="quizForm">
+        <!-- Câu 1 -->
+        <div class="question-block" id="q1">
+            <div class="question-title">Question 1:</div>
+            <div class="options-grid">
+                <label class="option-label"><input type="radio" name="question1" value="A"> A. divide</label>
+                <label class="option-label"><input type="radio" name="question1" value="B"> B. heavy</label>
+                <label class="option-label"><input type="radio" name="question1" value="C"> C. playtime</label>
+                <label class="option-label"><input type="radio" name="question1" value="D"> D. visit</label>
+            </div>
+            <div class="explanation" id="exp1">
+                <strong>Đáp án: A</strong><br>
+                - divide /dɪˈvaɪd/: nhấn âm 2.<br>
+                - Các từ còn lại nhấn âm 1: heavy /ˈhevi/, playtime /ˈpleɪtaɪm/, visit /ˈvɪzɪt/.
+            </div>
+        </div>
+
+        <!-- Câu 2 -->
+        <div class="question-block" id="q2">
+            <div class="question-title">Question 2:</div>
+            <div class="options-grid">
+                <label class="option-label"><input type="radio" name="question2" value="A"> A. achieve</label>
+                <label class="option-label"><input type="radio" name="question2" value="B"> B. prepare</label>
+                <label class="option-label"><input type="radio" name="question2" value="C"> C. exchange</label>
+                <label class="option-label"><input type="radio" name="question2" value="D"> D. strengthen</label>
+            </div>
+            <div class="explanation" id="exp2">
+                <strong>Đáp án: D</strong><br>
+                - strengthen /ˈstreŋθn/: nhấn âm 1.<br>
+                - Các từ còn lại nhấn âm 2: achieve /əˈtʃiːv/, prepare /prɪˈpeə(r)/, exchange /ɪksˈtʃeɪndʒ/.
+            </div>
+        </div>
+
+        <!-- Câu 3 -->
+        <div class="question-block" id="q3">
+            <div class="question-title">Question 3:</div>
+            <div class="options-grid">
+                <label class="option-label"><input type="radio" name="question3" value="A"> A. idea</label>
+                <label class="option-label"><input type="radio" name="question3" value="B"> B. trustful</label>
+                <label class="option-label"><input type="radio" name="question3" value="C"> C. success</label>
+                <label class="option-label"><input type="radio" name="question3" value="D"> D. respect</label>
+            </div>
+            <div class="explanation" id="exp3">
+                <strong>Đáp án: B</strong><br>
+                - trustful /ˈtrʌstfl/: nhấn âm 1.<br>
+                - Các từ còn lại nhấn âm 2: idea /aɪˈdɪə/, success /səkˈses/, respect /rɪˈspekt/.
+            </div>
+        </div>
+
+        <!-- Câu 4 -->
+        <div class="question-block" id="q4">
+            <div class="question-title">Question 4:</div>
+            <div class="options-grid">
+                <label class="option-label"><input type="radio" name="question4" value="A"> A. celebrate</label>
+                <label class="option-label"><input type="radio" name="question4" value="B"> B. homemaker</label>
+                <label class="option-label"><input type="radio" name="question4" value="C"> C. encourage</label>
+                <label class="option-label"><input type="radio" name="question4" value="D"> D. breadwinner</label>
+            </div>
+            <div class="explanation" id="exp4">
+                <strong>Đáp án: C</strong><br>
+                - encourage /ɪnˈkʌrɪdʒ/: nhấn âm 2.<br>
+                - Các từ còn lại nhấn âm 1: celebrate /ˈselɪbreɪt/, homemaker /ˈhəʊmmeɪkə(r)/, breadwinner /ˈbredwɪnə(r)/.
+            </div>
+        </div>
+
+        <!-- Câu 5 -->
+        <div class="question-block" id="q5">
+            <div class="question-title">Question 5:</div>
+            <div class="options-grid">
+                <label class="option-label"><input type="radio" name="question5" value="A"> A. opinion</label>
+                <label class="option-label"><input type="radio" name="question5" value="B"> B. personal</label>
+                <label class="option-label"><input type="radio" name="question5" value="C"> C. family</label>
+                <label class="option-label"><input type="radio" name="question5" value="D"> D. programme</label>
+            </div>
+            <div class="explanation" id="exp5">
+                <strong>Đáp án: A</strong><br>
+                - opinion /əˈpɪnjən/: nhấn âm 2.<br>
+                - Các từ còn lại nhấn âm 1: personal /ˈpɜːsənl/, family /ˈfæmili/, programme /ˈprəʊɡræm/.
+            </div>
+        </div>
+
+        <!-- Câu 6 -->
+        <div class="question-block" id="q6">
+            <div class="question-title">Question 6:</div>
+            <div class="options-grid">
+                <label class="option-label"><input type="radio" name="question6" value="A"> A. daily</label>
+                <label class="option-label"><input type="radio" name="question6" value="B"> B. believe</label>
+                <label class="option-label"><input type="radio" name="question6" value="C"> C. picnic</label>
+                <label class="option-label"><input type="radio" name="question6" value="D"> D. grateful</label>
+            </div>
+            <div class="explanation" id="exp6">
+                <strong>Đáp án: B</strong><br>
+                - believe /bɪˈliːv/: nhấn âm 2.<br>
+                - Các từ còn lại nhấn âm 1: daily /ˈdeɪli/, picnic /ˈpɪknɪk/, grateful /ˈɡreɪtfl/.
+            </div>
+        </div>
+
+        <!-- Câu 7 -->
+        <div class="question-block" id="q7">
+            <div class="question-title">Question 7:</div>
+            <div class="options-grid">
+                <label class="option-label"><input type="radio" name="question7" value="A"> A. equally</label>
+                <label class="option-label"><input type="radio" name="question7" value="B"> B. benefit</label>
+                <label class="option-label"><input type="radio" name="question7" value="C"> C. business</label>
+                <label class="option-label"><input type="radio" name="question7" value="D"> D. untidy</label>
+            </div>
+            <div class="explanation" id="exp7">
+                <strong>Đáp án: D</strong><br>
+                - untidy /ʌnˈtaɪdi/: nhấn âm 2.<br>
+                - Các từ còn lại nhấn âm 1: equally /ˈiːkwəli/, benefit /ˈbenɪfɪt/, business /ˈbɪznəs/.
+            </div>
+        </div>
+
+        <!-- Câu 8 -->
+        <div class="question-block" id="q8">
+            <div class="question-title">Question 8:</div>
+            <div class="options-grid">
+                <label class="option-label"><input type="radio" name="question8" value="A"> A. housewife</label>
+                <label class="option-label"><input type="radio" name="question8" value="B"> B. useful</label>
+                <label class="option-label"><input type="radio" name="question8" value="C"> C. routine</label>
+                <label class="option-label"><input type="radio" name="question8" value="D"> D. rubbish</label>
+            </div>
+            <div class="explanation" id="exp8">
+                <strong>Đáp án: C</strong><br>
+                - routine /ruːˈtiːn/: nhấn âm 2.<br>
+                - Các từ còn lại nhấn âm 1: housewife /ˈhaʊswaɪf/, useful /ˈjuːsfl/, rubbish /ˈrʌbɪʃ/.
+            </div>
+        </div>
+
+        <!-- Câu 9 -->
+        <div class="question-block" id="q9">
+            <div class="question-title">Question 9:</div>
+            <div class="options-grid">
+                <label class="option-label"><input type="radio" name="question9" value="A"> A. necessary</label>
+                <label class="option-label"><input type="radio" name="question9" value="B"> B. experience</label>
+                <label class="option-label"><input type="radio" name="question9" value="C"> C. appreciate</label>
+                <label class="option-label"><input type="radio" name="question9" value="D"> D. respectively</label>
+            </div>
+            <div class="explanation" id="exp9">
+                <strong>Đáp án: A</strong><br>
+                - necessary /ˈnesəsəri/: nhấn âm 1.<br>
+                - Các từ còn lại nhấn âm 2: experience /ɪkˈspɪəriəns/, appreciate /əˈpriːʃieɪt/, respectively /rɪˈspektɪvli/.
+            </div>
+        </div>
+
+        <!-- Câu 10 -->
+        <div class="question-block" id="q10">
+            <div class="question-title">Question 10:</div>
+            <div class="options-grid">
+                <label class="option-label"><input type="radio" name="question10" value="A"> A. grandparent</label>
+                <label class="option-label"><input type="radio" name="question10" value="B"> B. interested</label>
+                <label class="option-label"><input type="radio" name="question10" value="C"> C. responsibility</label>
+                <label class="option-label"><input type="radio" name="question10" value="D"> D. spotlessly</label>
+            </div>
+            <div class="explanation" id="exp10">
+                <strong>Đáp án: C</strong><br>
+                - responsibility /rɪˌspɒnsəˈbɪləti/: nhấn âm 4.<br>
+                - Các từ còn lại nhấn âm 1: grandparent /ˈɡrænpeərənt/, interested /ˈɪntrəstɪd/, spotlessly /ˈspɒtləsli/.
+            </div>
+        </div>
+
+        <div class="result-box" id="resultBox"></div>
+
+        <button type="button" class="btn-submit" onclick="checkAnswers()">Nộp Bài & Xem Đáp Án</button>
+    </form>
+</div>
+
+<script>
+    const correctAnswers = {
+        question1: "A",
+        question2: "D",
+        question3: "B",
+        question4: "C",
+        question5: "A",
+        question6: "B",
+        question7: "D",
+        question8: "C",
+        question9: "A",
+        question10: "C"
+    };
+
+    function checkAnswers() {
+        let score = 0;
+        const totalQuestions = Object.keys(correctAnswers).length;
+
+        for (let i = 1; i <= totalQuestions; i++) {
+            const qName = "question" + i;
+            const selected = document.querySelector(`input[name="${qName}"]:checked`);
+            const correctAnswer = correctAnswers[qName];
+            
+            const labels = document.querySelectorAll(`#q${i} .option-label`);
+            
+            labels.forEach(label => {
+                label.classList.remove('correct', 'incorrect');
+            });
+
+            labels.forEach(label => {
+                const input = label.querySelector('input');
+                if (input.value === correctAnswer) {
+                    label.classList.add('correct');
+                }
+                if (selected && selected.value !== correctAnswer && input.value === selected.value) {
+                    label.classList.add('incorrect');
+                }
+            });
+
+            if (selected && selected.value === correctAnswer) {
+                score++;
+            }
+
+            document.getElementById(`exp${i}`).style.display = "block";
+        }
+
+        const resultBox = document.getElementById("resultBox");
+        resultBox.style.display = "block";
+        resultBox.innerHTML = `Bạn đạt được: ${score}/${totalQuestions} câu đúng!`;
+        
+        resultBox.scrollIntoView({ behavior: 'smooth' });
+    }
+</script>
+
+</body>
+</html>
